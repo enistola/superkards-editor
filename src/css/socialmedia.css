@@ -1,0 +1,79 @@
+/* ---------------------------------------------------------- */
+/*                     SOCIAL MEDIA                           */
+/* ---------------------------------------------------------- */
+
+.socials {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+
+/* ------ SM HEADER ------ */
+
+.socials-header {
+  display: flex;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  position: relative;
+}
+.socials-header div {
+  color: #191a1d;
+  font-size: 1.6rem;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.socials-header div.active {
+  background-color: rgb(245, 245, 245);
+}
+.socials-header div:hover {
+  cursor: pointer;
+  background-color: rgb(245, 245, 245);
+}
+.socials-header div:last-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+/* ------ SM EDITOR ------ */
+
+.socials-editor {
+  padding: 1rem 2rem;
+}
+
+#socials-select {
+  background-image: url('../assets/icons/chevron-down.svg');
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  background-position: calc(100% - 0.8em) center;
+}
+
+/* ------ SM DELETE ------ */
+
+.socials-delete {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socials-delete:hover {
+  cursor: pointer;
+}
+.socials-delete span {
+  color: #7c7c7c;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.socials-delete span:hover {
+  color: #191a1d;
+}

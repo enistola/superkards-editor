@@ -1,0 +1,48 @@
+/* ---------------------------------------------------------- */
+/*                        IFRAME                              */
+/* ---------------------------------------------------------- */
+
+.iframe-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  /* opacity: 0; */
+}
+
+.iframe {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 0.3s ease;
+  -o-animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.3s ease;
+  animation-fill-mode: both;
+}
+
+.switch-to-mobile {
+  border: 3px solid #dadada;
+  padding: 1px;
+  width: 400px;
+  height: 80vh;
+  overflow-y: inherit;
+  box-shadow: -15px 8px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

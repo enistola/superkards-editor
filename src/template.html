@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Superkards - Editor</title>
+
+  <!-- WEBFONTS & MORE -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png" />
+</head>
+
+<body>
+  <div class="mobile-no-edit">
+    <div>
+      <h3 class="sorry">Sorry &#x1F641;</h3>
+      <p>
+        Editing a template doesn't work on your mobile device. Please visit Superkards on a PC or Mac to create your
+        website
+      </p>
+      <a href="https://superkards.com" class="live-demo">
+        See Live Demo
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-chevron-right no-edit-chevron">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+      <a href="https://superkards.com" class="go-back">Back to Templates</a>
+    </div>
+  </div>
+  <noscript>
+    <div class="noscriptmsg"
+      style="width: 100vw; height: 100vh; background-color: #fff; position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center;">
+      You don't have javascript enabled. Superkards doesn't work without javascript, so please enable it in your browser
+      settings.
+    </div>
+  </noscript>
+
+  <div class="everything">
+    <div class="loader-wrapper">
+      <div class="loader">
+        <img src="assets/gif/Lava Lamp-1s-200px.gif">
+        <h3>Loading</h3>
+      </div>
+    </div>
+
+    <div class="fixed-bar">
+      <div class="fixed-bar-item switch-screen desktop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5b5b63"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+          <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        </svg>
+        <span class="disable-user-focus">Mobile</span>
+      </div>
+      <div class="fixed-bar-item download-template open-editor">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5b5b63"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span class="disable-user-focus">Download</span>
+      </div>
+    </div>
+
+    <div class="editor-wrapper closed-editor-wrapper">
+      <div class="close-editor-wrapper hide-element"></div>
+      <div class="editor closed-editor">
+        <!-- INTRO -->
+        <div class="content hide-element" id="intro">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Intro</span></div>
+          </div>
+          <div class="content-item">
+            <div class="upload">
+              <form class="file-upload">
+                <div class="upload-wrapper">
+                  <input class="image-upload" id="top-section-image--upload" type="file" onclick="this.value=null;" />
+                  <label for="top-section-image--upload" class="image-upload-label disable-user-focus">+</label>
+                </div>
+                <span class="error-text hide-element">Please upload a .jpg or .png image smaller than 2MB!</span>
+                <div class="upload-preview hide-element" id="top-section-image--preview">
+                  <div class="delete-preview-image"><img src="assets/icons/x.svg"></div>
+                  <div class="upload-target"><span>Top Section</span></div>
+                  <h5 class="upload-preview--filename">Intro.jpg</h5>
+                  <span class="upload-preview--filesize">324KB</span>
+                </div>
+              </form>
+            </div>
+            <div class="divider m3"></div>
+            <div class="input-wrapper">
+              <h5>Intro Text</h5>
+              <input class="input input-light" type="text" value="Build your business. Work from home."></input>
+            </div>
+          </div>
+        </div>
+        <!-- TEXT EDIT -->
+        <div class="content hide-element" id="text-edit">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Main Product</span></div>
+          </div>
+          <div class="content-item">
+            <div class="input-wrapper">
+              <h5>Heading</h5>
+              <input class="input input-light" type="text" value="Making $7,500 / mo isn't hard"></input>
+            </div>
+            <div class="input-wrapper">
+              <h5>Subheading</h5>
+              <input class="input input-light" type="text" value="You just have to get started"></input>
+            </div>
+            <div class="divider m2"></div>
+            <div class="input-wrapper">
+              <h5>Paragraph</h5>
+              <textarea class="textarea input" type="text"></textarea>
+            </div>
+            <div class="space m1"></div>
+          </div>
+        </div>
+        <!-- MAIN PRODUCT - BUY -->
+        <div class="content hide-element" id="main-product">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Main Product</span></div>
+            <div class="content-header-item disable-user-focus"><span>More Infos</span></div>
+          </div>
+          <div class="content-item">
+            <p class="content-paragraph">Set an expiration date for the countdown timer.
+            </p>
+            <div class="countdown-input">
+              <div class="input-wrapper">
+                <h5>Month</h5>
+                <input class="input input-light" type="text" value="08" autocomplete="off"></input>
+              </div>
+              <div class="input-wrapper">
+                <h5>Day</h5>
+                <input class="input input-light" type="text" value="12" autocomplete="off"></input>
+              </div>
+              <div class="input-wrapper">
+                <h5>Year</h5>
+                <input class="input input-light" type="text" value="2021" autocomplete="off"></input>
+              </div>
+              <div class="input-wrapper">
+                <h5>Hours</h5>
+                <input class="input input-light" type="text" value="18" autocomplete="off"></input>
+              </div>
+              <div class="input-wrapper">
+                <h5>Minutes</h5>
+                <input class="input input-light" type="text" value="00" autocomplete="off"></input>
+              </div>
+            </div>
+            <div class="divider m2"></div>
+            <div class="input-wrapper">
+              <h5>Discounted Price</h5>
+              <input class="input input-light" type="text" value="$49"></input>
+            </div>
+            <div class="input-wrapper">
+              <h5>Regular Price</h5>
+              <input class="input input-light" type="text" value="$79"></input>
+            </div>
+            <div class="divider m2"></div>
+            <div class="input-wrapper">
+              <h5>Gumroad Product Link</h5>
+              <input class="input input-light" type="text" value="https:gum.co/hzuKi9"></input>
+            </div>
+            <div class="divider m2"></div>
+            <div class="input-wrapper">
+              <h5>Money-Back-Guarantee</h5>
+              <input class="input input-light" type="text" value="30-Day Money-Back-Guarantee!"></input>
+            </div>
+            <div class="space m1"></div>
+          </div>
+          <div class="content-item hide-element">
+            <h6 class="more-infos-title">1. Countdown Timer</h6>
+            <p class="content-paragraph">
+              The countdown timer gives you the option to offer your customers a discount after a new course/product
+              launch. After your discount expires, price and design changes automatically.
+            </p>
+            <img src="assets/img/button-morph.jpg" class="more-infos-image">
+            <p class="content-paragraph">
+              <b>Important note:</b> The price label on your website will change automatically, but you'll have to
+              change the product price in your Gumroad account manually, otherwise the changes won't take effect.
+            </p>
+            <div class="divider m2"></div>
+            <h6 class="more-infos-title">2. Gumroad Product Link</h6>
+            <p class="content-paragraph">
+              To get the Gumroad product link, go to your dashboard and navigate to the product section. There, choose
+              a
+              product and go to the share tab. There, copy your product link by clicking the "Copy URL" button.
+            </p>
+            <img src="assets/img/gumroad-link.jpg" class="more-infos-image">
+            <p class="content-paragraph">
+              Never worked with Gumroad before and need a detailed tutorial? <a href="" class="content-link">Learn
+                more</a>
+            </p>
+          </div>
+        </div>
+        <!-- ABOUT -->
+        <div class="content hide-element" id="about">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Profile Image</span></div>
+          </div>
+          <div class="content-item">
+            <p class="content-paragraph">Upload a profile image for the about section.</p>
+            <div class="upload">
+              <form class="file-upload file-upload-sm">
+                <div class="upload-wrapper">
+                  <input class="image-upload" id="about-image--upload" type="file" onclick="this.value=null;" />
+                  <label for="about-image--upload"
+                    class="image-upload-label upload-label-sm disable-user-focus">+</label>
+                </div>
+                <span class="error-text hide-element">Please upload a .jpg or .png image smaller than 2MB!</span>
+                <div class="upload-preview hide-element" id="about-image--preview">
+                  <div class="delete-preview-image"><img src="assets/icons/x.svg"></div>
+                  <div class="upload-target"><span>Profile image</span></div>
+                  <h5 class="upload-preview--filename">Profile.jpg</h5>
+                  <span class="upload-preview--filesize">93KB</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- SOCIAL MEDIA -->
+        <div class="content hide-element" id="social-media-editor">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Social Media</span></div>
+          </div>
+          <div class="content-item">
+            <div class="input-wrapper">
+              <h5>Social Media Heading</h5>
+              <input class="input input-light" type="text" value="Find me on"></input>
+            </div>
+            <div class="divider m2"></div>
+            <div class="socials">
+              <div class="socials-header">
+                <div class="socials-header--icon active"><i class="fab fa-instagram socials-fontawesome instagram"></i>
+                </div>
+                <div class="socials-header--icon"><i class="fab fa-twitter socials-fontawesome twitter"></i></div>
+                <div class="socials-header--icon"><i class="fab fa-youtube socials-fontawesome youtube"></i></div>
+                <div class="socials-header--icon"><i
+                    class="fab fa-snapchat-ghost socials-fontawesome snapchat-ghost"></i>
+                </div>
+                <div class="socials-header--icon"><i class="fab fa-linkedin-in socials-fontawesome linkedin-in"></i>
+                </div>
+                <div class="socials-header--plus hide-element"><span>+</span></div>
+              </div>
+              <div class="socials-editor">
+                <form>
+                  <div class="input-wrapper">
+                    <h5>Icon</h5>
+                    <select class="input input-light" id="socials-select">
+                      <option value='<i class="fab fa-angellist socials-fontawesome angellist"></i>'>
+                        Angellist
+                      </option>
+                      <option value='<i class="fab fa-behance socials-fontawesome behance"></i>'>
+                        Behance
+                      </option>
+                      <option value='<i class="fab fa-bitcoin socials-fontawesome bitcoin"></i>'>
+                        Bitcoin
+                      </option>
+                      <option value='<i class="fas fa-envelope socials-fontawesome contact"></i>'>
+                        Contact
+                      </option>
+                      <option value='<i class="fab fa-discord socials-fontawesome discord"></i>'>
+                        Discord
+                      </option>
+                      <option value='<i class="fab fa-dribbble socials-fontawesome dribbble"></i>'>
+                        Dribbble
+                      </option>
+                      <option value='<i class="fab fa-facebook-f socials-fontawesome facebook-f"></i>'>
+                        Facebook
+                      </option>
+                      <option value='<i class="fab fa-facebook-messenger socials-fontawesome facebook-messenger "></i>'>
+                        Messenger
+                      </option>
+                      <option value='<i class="fab fa-flickr socials-fontawesome flickr"></i>'>
+                        Flickr
+                      </option>
+                      <option value='<i class="fab fa-github socials-fontawesome github"></i>'>
+                        Github
+                      </option>
+                      <option selected="selected"
+                        value='<i class="fab fa-instagram socials-fontawesome instagram"></i>'>
+                        Instagram
+                      </option>
+                      <option value='<i class="fas fa-link socials-fontawesome link"></i>'>
+                        Link
+                      </option>
+                      <option value='<i class="fab fa-linkedin-in socials-fontawesome linkedin-in"></i>'>
+                        Linkedin
+                      </option>
+                      <option value='<i class="fab fa-medium-m socials-fontawesome medium-m"></i>'>
+                        Medium
+                      </option>
+                      <option value='<i class="fab fa-patreon socials-fontawesome patreon"></i>'>
+                        Patreon
+                      </option>
+                      <option value='<i class="fab fa-paypal socials-fontawesome paypal"></i>'>
+                        Paypal
+                      </option>
+                      <option value='<i class="fab fa-pinterest-p socials-fontawesome pinterest-p"></i>'>
+                        Pinterest
+                      </option>
+                      <option value='<i class="fab fa-reddit-alien socials-fontawesome reddit-alien"></i>'>
+                        Reddit
+                      </option>
+                      <option value='<i class="fab fa-slack socials-fontawesome slack"></i>'>
+                        Slack
+                      </option>
+                      <option value='<i class="fab fa-snapchat-ghost socials-fontawesome snapchat-ghost"></i>'>
+                        Snapchat
+                      </option>
+                      <option value='<i class="fab fa-spotify socials-fontawesome spotify"></i>'>
+                        Spotify
+                      </option>
+                      <option value='<i class="fab fa-steam socials-fontawesome steam"></i>'>
+                        Steam
+                      </option>
+                      <option value='<i class="fab fa-telegram socials-fontawesome telegram"></i>'>
+                        Telegram
+                      </option>
+                      <option value='<i class="fab fa-tumblr socials-fontawesome tumblr"></i>'>
+                        Tumblr
+                      </option>
+                      <option value='<i class="fab fa-twitch socials-fontawesome twitch"></i>'>
+                        Twitch
+                      </option>
+                      <option value='<i class="fab fa-twitter socials-fontawesome twitter"></i>'>
+                        Twitter
+                      </option>
+                      <option value='<i class="fab fa-whatsapp socials-fontawesome whatsapp"></i>'>
+                        Whatsapp
+                      </option>
+                      <option value='<i class="fab fa-youtube socials-fontawesome youtube"></i>'>
+                        Youtube
+                      </option>
+                    </select>
+                  </div>
+                </form>
+                <div class="input-wrapper">
+                  <h5>URL</h5>
+                  <input class="input input-light" id="socials-url" type="text"
+                    value="https://www.instagram.com/superkards" autocomplete="off"></input>
+                </div>
+              </div>
+              <div class="socials-delete"><span>Delete</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- MORE PRODUCTS COUNTER -->
+        <div class="content hide-element" id="more-products-counter">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>More Courses</span></div>
+          </div>
+          <div class="content-item">
+            <div class="input-wrapper">
+              <h5>Section Title</h5>
+              <input class="input input-light" type="text" value="- More courses -"></input>
+            </div>
+            <div class="divider m2"></div>
+            <p class="content-paragraph">Add or remove courses from the "More Courses" section.</p>
+            <div class="counter-wrapper">
+              <div class="counter-minus">-</div>
+              <div class="counter-value">2</div>
+              <div class="counter-plus">+</div>
+            </div>
+            <p class="content-paragraph">To remove this section completely, set the counter to <b>"0"</b>.</p>
+          </div>
+        </div>
+        <!-- SINGLE PRODUCT -->
+        <div class="content hide-element" id="more-products">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Product 1</span></div>
+            <div class="content-header-item disable-user-focus"><span>More Infos</span></div>
+          </div>
+          <div class="content-item">
+            <div class="upload">
+              <form class="file-upload">
+                <div class="upload-wrapper">
+                  <input class="image-upload" id="more-products-image--upload" type="file" onclick="this.value=null;" />
+                  <label for="more-products-image--upload" class="image-upload-label disable-user-focus">+</label>
+                </div>
+                <span class="error-text hide-element">Please upload a .jpg or .png image smaller than 2MB!</span>
+                <div class="upload-preview hide-element" id="more-products-image--preview">
+                  <div class="delete-preview-image"><img src="assets/icons/x.svg"></div>
+                  <div class="upload-target"><span>Product 1</span></div>
+                  <h5 class="upload-preview--filename">Twitter-mobile.jpg</h5>
+                  <span class="upload-preview--filesize">282KB</span>
+                </div>
+              </form>
+            </div>
+            <div class="divider m3"></div>
+            <div class="input-wrapper">
+              <h5>Title</h5>
+              <input class="input input-light" type="text" value="Twitter Gold"></input>
+            </div>
+            <div class="input-wrapper">
+              <h5>Description</h5>
+              <input class="input input-light" type="text" value="$76,292 / year using Twitter & Gumroad"></input>
+            </div>
+            <div class="divider m2"></div>
+            <div class="input-wrapper">
+              <h5>Button Text</h5>
+              <input class="input input-light" type="text" value="DOWNLOAD - FREE"></input>
+            </div>
+            <div class="input-wrapper">
+              <h5>Gumroad Link</h5>
+              <input class="input input-light" type="text" value="https:gum.co/hzuKi9"></input>
+            </div>
+            <div class="space m1"></div>
+          </div>
+          <div class="content-item hide-element">
+            <h6 class="more-infos-title">Gumroad Product Link</h6>
+            <p class="content-paragraph">
+              To get the Gumroad product link, go to your dashboard and navigate to the product section. There, choose
+              a
+              product and go to the share tab. There, copy your product link by clicking the "Copy URL" button.
+            </p>
+            <img src="assets/img/gumroad-link.jpg" class="more-infos-image">
+            <p class="content-paragraph">
+              Never worked with Gumroad before and need a detailed tutorial? <a href="" class="content-link">Learn
+                more</a>
+            </p>
+          </div>
+        </div>
+        <!-- FINAL TOUCH -->
+        <div class="content hide-element" id="final-touch">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Final Touches</span></div>
+            <div class="content-header-item disable-user-focus"><span>More Infos</span></div>
+          </div>
+          <div class="content-item">
+            <p class="content-paragraph">
+              Before downloading your website, please upload a favicon and add your website title. To learn more,
+              use the <b>"More Infos"</b> tab.
+            </p>
+            <div class="favicon-wrapper">
+              <div class="upload">
+                <form class="file-upload">
+                  <div class="upload-wrapper">
+                    <input class="image-upload" id="favicon--upload" type="file" onclick="this.value=null;" />
+                    <label for="favicon--upload" class="image-upload-label upload-label-sm disable-user-focus">+</label>
+                  </div>
+                  <span class="error-text hide-element">Please upload a .jpg or .png image smaller than 2MB!</span>
+                  <div class="upload-preview hide-element" id="favicon--preview">
+                    <div class="delete-preview-image"><img src="assets/icons/x.svg"></div>
+                    <div class="upload-target hide-element"><span></span></div>
+                    <h5 class="upload-preview--filename hide-element"></h5>
+                    <span class="upload-preview--filesize hide-element"></span>
+                  </div>
+                </form>
+              </div>
+              <p class="content-paragraph">
+                <b>Favicon:</b> Upload a 32 x 32 .png image.
+              </p>
+            </div>
+            <div class="divider m2"></div>
+            <div class="input-wrapper">
+              <h5>Website Title</h5>
+              <input class="input input-light" type="text" value="Superkards - Amazing websites for free"></input>
+            </div>
+          </div>
+          <div class="content-item hide-element">
+            <h6 class="more-infos-title">Favicon & Website Title</h6>
+            <p class="content-paragraph">
+              Favicon and website title will be displayed in the browser tab of your website. See the image below
+              for an example.
+            </p>
+            <img src="assets/img/favicon-title.jpg" class="more-infos-image">
+            <p class="content-paragraph">
+              When uploading your favicon, please make sure to upload <b>32 x 32</b> or <b>16 x 16</b> .png image for
+              the best results.
+            </p>
+          </div>
+        </div>
+        <!-- DOWNLOAD TEMPLATE -->
+        <div class="content hide-element" id="download">
+          <div class="content-header">
+            <div class="content-header-item disable-user-focus active"><span>Download</span></div>
+          </div>
+          <div class="content-item">
+            <p class="content-paragraph">
+              Your website is ready for download. Please save the files somewhere you can find them again. We'll need
+              them in a couple of minutes.
+            </p>
+            <div class="download-website">
+              <div><img src="assets/icons/arrow-down.svg" /></div>
+              Download Website
+            </div>
+            <div class="divider m2"></div>
+            <p class="content-paragraph">
+              After downloading, there is one final, but crucial step left: hosting your website. Please follow the
+              tutorial in the next slide to learn how that works. &rarr;
+            </p>
+          </div>
+        </div>
+        <div class="content-footer"><span class="done-btn disable-user-focus">DONE</span></div>
+        <div class="content-footer download-footer hide-element">
+          <span class="close-btn disable-user-focus">CLOSE</span>
+          <span class="back-btn disable-user-focus hide-element">BACK</span>
+          <span class="next-btn disable-user-focus">NEXT</span>
+          <span class="done-btn disable-user-focus hide-element">DONE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="iframe-wrapper iframe-wrapper-transition"> -->
+    <div class="iframe-wrapper">
+      <iframe src="../src/twostein/index.html" class="iframe" id="iframeId" frameborder="0"></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

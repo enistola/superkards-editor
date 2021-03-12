@@ -1,0 +1,177 @@
+/* ---------------------------------------------------------- */
+/*                      BASIC SETUP                           */
+/* ---------------------------------------------------------- */
+
+:root {
+  --main-text: #191a1d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #f5f0ee;
+  color: #191a1d;
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hide-element {
+  display: none !important;
+}
+.disable-user-focus {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* ---------------------------------------------------------- */
+/*                     MOBILE NO EDIT                         */
+/* ---------------------------------------------------------- */
+
+.mobile-no-edit {
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-no-edit div {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.sorry {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #191a1d;
+}
+
+.mobile-no-edit div p {
+  font-size: 1.4rem;
+  color: #191a1d;
+  padding: 2rem;
+  margin: 3rem 0;
+}
+
+.live-demo {
+  color: #fff;
+  font-size: 1.4rem;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1.5rem 2.5rem;
+  text-decoration: none;
+  position: relative;
+  background-color: rgb(43, 126, 250);
+  transition: all 0.3s;
+}
+.live-demo svg {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-45%);
+}
+.live-demo:hover,
+.live-demo:active {
+  background-color: rgb(17, 110, 250);
+}
+
+.go-back {
+  font-size: 1.3rem;
+  color: #1e8be4;
+  border-bottom: 1px solid #1e8be4;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .mobile-no-edit {
+    display: flex;
+  }
+  .mobile-no-edit div p {
+    padding: 3rem 0;
+  }
+  .live-demo {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .mobile-no-edit div {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .everything {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------- */
+/*                        LOADER                              */
+/* ---------------------------------------------------------- */
+
+.loader-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* TODO: CHANGE BACK TO FLEX */
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 10000;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loader img {
+  width: 100px;
+}
+.loader h3 {
+  color: rgb(220, 220, 220);
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+/* ---------------------------------------------------------- */
+/*                       SAFARI BUGS                          */
+/* ---------------------------------------------------------- */
+
+.display-block {
+  display: block;
+}

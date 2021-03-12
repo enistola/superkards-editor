@@ -1,0 +1,14 @@
+.countdown-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.countdown-input .input-wrapper {
+  width: 19%;
+}
+.countdown-input .input-wrapper h5 {
+  font-size: 1rem;
+}
+.countdown-input .input-wrapper .input {
+  height: 35px;
+}
