@@ -10,4 +10,10 @@ It is a vanilla javascript project that utilizes webpack as a module bundler.
 
 Switch into directory with `cd superkards-editor` and run `npm start`. It will automatically open on localhost:8080
 
+## Live demo
+
+[Live Demo](https://superkards-editor.netlify.app/)
+
 ## Demo Image
+
+![Demo image](https://github.com/enistola/superkards-editor/blob/main/screenshot.png?raw=true)
